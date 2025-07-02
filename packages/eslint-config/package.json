@@ -2,6 +2,10 @@
   "name": "@repo/eslint-config",
   "version": "0.0.0",
   "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -9,7 +13,8 @@
     "@darraghor/eslint-plugin-nestjs-typed": "^6.7.0",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.29.0",
-    "eslint-config-prettier": "^10.1.1",
+    "eslint": "^9.29.0",
+    "eslint-config-prettier": "^10.1.5",
     "eslint-config-turbo": "^2.5.0",
     "eslint-plugin-nestjs": "^1.2.3",
     "eslint-plugin-svelte": "^2.46.1",

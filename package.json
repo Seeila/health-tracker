@@ -5,15 +5,23 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-  "format": "pnpm exec prettier --write .",
-    "check-types": "turbo run check-types"
+    "format": "pnpm exec prettier --write .",
+    "check-types": "turbo run check-types",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
     "prettier": "^3.6.0",
     "prettier-plugin-svelte": "^3.4.0",
     "turbo": "^2.5.4"
+  },
+  "lint-staged": {
+    "*.{js,ts,svelte,json,md,yml,yaml}": [
+      "pnpm exec prettier --write"
+    ]
   },
   "packageManager": "pnpm@10.0.0",
   "engines": {
@@ -23,7 +31,7 @@
     "packageExtensions": {
       "prettier": {
         "dependencies": {
-          "prettier-plugin-svelte" :"*"
+          "prettier-plugin-svelte": "*"
         }
       }
     }
